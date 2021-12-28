@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="margin_video_counter_pix">42dp</dimen>
+    <dimen name="margin_top">0dp</dimen>
+    <dimen name="margin_top_nve">0dp</dimen>
+    <dimen name="small_thumb">62dp</dimen>
+    <dimen name="fastscroll_bubble_size">38dp</dimen>
+</resources>

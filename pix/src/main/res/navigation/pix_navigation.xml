@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pix_navigation"
+    app:startDestination="@id/pixFragment">
+
+    <fragment
+        android:id="@+id/pixFragment"
+        android:name="io.ak1.pix.PixFragment"
+        android:label="PixFragment" >
+
+        <argument
+            android:name="options"
+            app:argType="io.ak1.pix.models.Options" />
+        <action
+            android:id="@+id/action_pixFragment_to_pixPreviewImageFragment"
+            app:destination="@id/pixPreviewImageFragment" />
+        <action
+            android:id="@+id/action_pixFragment_to_pixPreviewVideoFragment"
+            app:destination="@id/pixPreviewVideoFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/pixPreviewImageFragment"
+        android:name="io.ak1.pix.PixPreviewImageFragment"
+        android:label="PixPreviewImageFragment" >
+        <argument
+            android:name="imagePath"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixPreviewVideoFragment"
+        android:name="io.ak1.pix.PixPreviewVideoFragment"
+        android:label="PixPreviewVideoFragment" >
+
+        <argument
+            android:name="videoPath"
+            app:argType="string" />
+
+    </fragment>
+
+
+</navigation>

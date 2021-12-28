@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131313"
+    tools:context=".PixPreviewImageFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/iv"
+        android:adjustViewBounds="true"/>
+
+    <FrameLayout
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp">
+
+        <ImageView
+            android:layout_width="@dimen/small_thumb"
+            android:layout_height="@dimen/small_thumb"
+            android:background="@drawable/circular_button"
+            android:padding="12dp"
+            android:src="@drawable/ic_check_black_24dp" />
+
+        <TextView
+            android:id="@+id/img_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="5dp"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+
+</RelativeLayout>
