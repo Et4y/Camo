@@ -14,7 +14,7 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 6
+        versionCode 7
         versionName "1.5.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -39,10 +39,6 @@ android {
     }
 }
 
-//repositories {
-//    mavenCentral()
-//    maven { url 'https://maven.google.com' }
-//}
 
 dependencies {
 
@@ -80,8 +76,6 @@ dependencies {
 
     //Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
-
-//    implementation 'com.github.HamidrezaAmz:MagicalExoPlayer:2.0.7'
 
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

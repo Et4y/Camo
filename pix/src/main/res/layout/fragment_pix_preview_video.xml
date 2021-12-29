@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#131313"
     tools:context=".PixPreviewImageFragment">
 
-<!--    <com.potyvideo.library.AndExoPlayerView-->
-<!--        android:id="@+id/andExoPlayerView"-->
+
+
+
+<!--    <com.google.android.exoplayer2.ui.PlayerView-->
+<!--        android:id="@+id/player_view"-->
 <!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:andexo_aspect_ratio="aspect_16_9"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        app:andexo_play_when_ready="true"-->
-<!--        app:andexo_show_controller="true"-->
-<!--        app:andexo_resize_mode="Fit" />-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:show_shuffle_button="true"-->
+<!--        app:show_subtitle_button="true" />-->
+
+    <VideoView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_view"/>
 
     <FrameLayout
         android:id="@+id/sendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp">
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp">
 
         <ImageView
             android:layout_width="@dimen/small_thumb"

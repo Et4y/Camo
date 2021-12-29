@@ -1,5 +1,9 @@
 package io.ak1.pix
 
+//import com.potyvideo.library.globalInterfaces.AndExoPlayerListener
+
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +14,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-//import com.potyvideo.library.globalInterfaces.AndExoPlayerListener
 import io.ak1.pix.databinding.FragmentPixPreviewVideoBinding
 
 
@@ -50,15 +53,16 @@ class PixPreviewVideoFragment : Fragment() {
 
 
     private fun receiveData() {
-//        binding.andExoPlayerView.setSource(args.videoPath)
-//
-//        binding.andExoPlayerView.setAndExoPlayerListener(object : AndExoPlayerListener {
-//            override fun onExoReady() {
-//                super.onExoReady()
-//                duration = binding.andExoPlayerView.playerView.player?.duration!!
-//            }
-//
-//        })
+
+        binding.videoView.setVideoURI(Uri.parse(args.videoPath))
+
+        binding.videoView.setOnPreparedListener {
+            MediaPlayer.OnPreparedListener {
+                duration = it.duration.toLong()
+            }
+        }
+
+
 
         binding.sendButton.setOnClickListener {
             if (duration != 0L) {
@@ -70,5 +74,6 @@ class PixPreviewVideoFragment : Fragment() {
             }
         }
     }
+
 
 }
