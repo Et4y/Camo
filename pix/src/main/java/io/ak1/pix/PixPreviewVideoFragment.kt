@@ -63,7 +63,6 @@ class PixPreviewVideoFragment : Fragment() {
         }
 
 
-
         binding.sendButton.setOnClickListener {
             if (duration != 0L) {
                 setFragmentResult(
